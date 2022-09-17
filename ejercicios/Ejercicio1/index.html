@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title> Ejercicio DOM, Eventos y Funciones </title>
+
+        <style>
+
+            .box{
+                float: left;
+                width: 250px;
+                margin: 20px;
+                height: 250px;
+            }
+
+            .dashed{
+                border: 3px dashed black;
+                padding: 5px;
+            }
+
+
+
+        </style>
+
+        <script type="text/javascript" src="js/ejercicio1.js" ></script>
+
+    </head>
+
+    <body>
+
+        <!--
+
+            1. Formularios con los campos: Nombre, Apellidos y Edad
+            2. Boton de enviar el formulario: eventos submit
+            3. Mostrar esos datos por pantalla
+            4. Tener un boton que al darle click nos muestra los datos actuales del formulario
+            5. Variacion del formulario
+        -->
+
+        <h1> Ejercicio DOM, Eventos y Funciones </h1>
+
+        <!--Se crea el formulario con los datos necesarios-->
+
+        <h2>  Formulario  </h2>
+
+        <div class="box">
+            <form action="#" method="POST" id="formulario" onsubmit="return false">
+
+                <!--Primero se pide el nombre-->
+    
+                <p>
+                    <label for="nombre"> Nombre: </label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                </p> 
+    
+                <!--Apellido-->
+    
+                <p>
+                    <label for="apellido"> Apellido: </label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required> 
+                </p>
+    
+                <!--Edad-->
+    
+                <p>
+                    <label for="edad"> Edad: </label>
+                    <input type="number" name="edad" id="edad" placeholder="Edad" min="1" max="100" required> 
+                </p>
+    
+                <!--Sumbit-->
+    
+                <p>
+                    <input type="submit" value="Enviar" id="submit">
+                </p>
+    
+            </form>
+        </div>
+
+        <div class="box dashed">
+
+            <h3>Informacion del Usuario</h3>
+            <hr>
+
+            <p id="p_nombre"> Nombre: <span></span></p>
+            <p id="p_apellido">Apellido: <span></span></p>
+            <p id="p_edad">Edad: <span></span></p>
+
+        </div>
+
+
+    </body>
+
+</html>
